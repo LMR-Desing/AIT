@@ -96,23 +96,34 @@ function buscarInfracoes(termoPesquisa) {
 
 // --- Função para Destacar Termos nos Resultados ---
 function destacarTermo(textoOriginal) {
-    let textoProcessado = textoOriginal;
+    // Garante que termoBuscaAtual está definido e tem palavras
     const palavrasParaDestacar = termoBuscaAtual.split(" ").filter(p => p.length > 0);
+    let textoProcessado = textoOriginal;
 
-    palavrasParaDestacar.forEach(palavra => {
-        // Escapa caracteres especiais na palavra para uso em RegExp
-        const palavraEscapada = palavra.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        try {
-            // Cria uma Expressão Regular para a palavra, case-insensitive e global
-            const regex = new RegExp(`(${palavraEscapada})`, "gi");
-            // Substitui todas as ocorrências da palavra pelo termo marcado
-            textoProcessado = textoProcessado.replace(regex, `<mark>$1</mark>`);
-        } catch (e) {
-            console.error(`Erro ao destacar a palavra "${palavra}":`, e);
-        }
-    });
+    if (!textoProcessado) { // Se o texto original for nulo ou vazio, não há o que destacar
+        return "N/A";
+    }
+
+    // Cria uma única regex para todos os termos de busca
+    const termosRegex = palavrasParaDestacar
+        .map(palavra => palavra.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) // Escapa caracteres especiais
+        .join("|"); // Junta com OR para buscar qualquer um dos termos
+
+    if (termoBuscaAtual.length === 0 || termosRegex.length === 0) {
+        return textoOriginal; // Não faz nada se não houver termos para destacar
+    }
+
+    try {
+        const regexCompleta = new RegExp(`(${termosRegex})`, "gi");
+        textoProcessado = textoProcessado.replace(regexCompleta, (match) => `<mark>${match}</mark>`);
+    } catch (e) {
+        console.error(`Erro ao criar ou usar RegExp para destacar termos: "${termoBuscaAtual}"`, e);
+        return textoOriginal; // Em caso de erro, retorna o texto original sem destaque
+    }
+
     return textoProcessado;
 }
+
 
 // --- Função para Mostrar os Resultados na Interface ---
 function mostrarResultados(resultadosParaExibir) {
@@ -125,18 +136,17 @@ function mostrarResultados(resultadosParaExibir) {
     divRespostas.innerHTML = ""; // Limpa resultados anteriores
 
     if (resultadosParaExibir.length === 0) {
-        divRespostas.innerHTML = `<p>Nenhuma infração encontrada para a sua pesquisa "${termoBuscaAtual}".</p>`;
+        divRespostas.innerHTML = `<p class="mensagem-inicial">Nenhuma infração encontrada para a sua pesquisa "${termoBuscaAtual}".</p>`;
         return;
     }
 
-    // Calcula os resultados da página atual
     const inicio = (paginaAtual - 1) * resultadosPorPagina;
     const fim = inicio + resultadosPorPagina;
     const resultadosNaPagina = resultadosParaExibir.slice(inicio, fim);
 
     resultadosNaPagina.forEach(item => {
         const bloco = document.createElement("div");
-        bloco.className = "resultado-infracao"; // Nome de classe mais específico
+        bloco.className = "resultado-infracao";
         bloco.innerHTML = `
             <strong>Código:</strong> ${item["codigo"] || "N/A"}<br>
             <strong>Desdobramento:</strong> ${item["desdobramento"] ? destacarTermo(item["desdobramento"]) : "N/A"}<br>
@@ -159,22 +169,23 @@ function mostrarPaginacao(totalResultados) {
 
     const totalPaginas = Math.ceil(totalResultados / resultadosPorPagina);
 
-    // Remove paginação existente para evitar duplicatas
     const navExistente = divRespostas.querySelector(".paginacao");
     if (navExistente) {
         navExistente.remove();
     }
 
-    if (totalPaginas <= 1) { // Não mostra paginação se há apenas 1 página ou nenhum resultado
+    if (totalPaginas <= 1 && totalResultados > 0) {
+        return;
+    }
+    if (totalResultados === 0) {
         return;
     }
 
     const navPaginacao = document.createElement("div");
     navPaginacao.className = "paginacao";
 
-    const inputPesquisa = document.getElementById("pergunta"); // Referência ao input de busca
+    const inputPesquisa = document.getElementById("pergunta");
 
-    // Botão Anterior
     if (paginaAtual > 1) {
         const btnAnterior = document.createElement("button");
         btnAnterior.textContent = "⬅ Anterior";
@@ -183,67 +194,11 @@ function mostrarPaginacao(totalResultados) {
             if (inputPesquisa) {
                 mostrarResultados(buscarInfracoes(inputPesquisa.value));
             }
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Volta para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         };
         navPaginacao.appendChild(btnAnterior);
     }
 
-    // Botões de número de página
     for (let i = 1; i <= totalPaginas; i++) {
         const btnPagina = document.createElement("button");
-        btnPagina.textContent = i;
-        btnPagina.className = paginaAtual === i ? "active" : ""; // Adiciona classe para página atual
-        btnPagina.onclick = () => {
-            paginaAtual = i;
-            if (inputPesquisa) {
-                mostrarResultados(buscarInfracoes(inputPesquisa.value));
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Volta para o topo
-        };
-        navPaginacao.appendChild(btnPagina);
-    }
-
-    // Botão Próximo
-    if (paginaAtual < totalPaginas) {
-        const btnProximo = document.createElement("button");
-        btnProximo.textContent = "Próximo ➡";
-        btnProximo.onclick = () => {
-            paginaAtual++;
-            if (inputPesquisa) {
-                mostrarResultados(buscarInfracoes(inputPesquisa.value));
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Volta para o topo
-        };
-        navPaginacao.appendChild(btnProximo);
-    }
-
-    divRespostas.appendChild(navPaginacao);
-}
-
-// --- Inicialização da Aplicação ---
-document.addEventListener("DOMContentLoaded", () => {
-    // Carrega os dados quando o DOM estiver completamente carregado
-    carregarDadosInfracoes().then(() => {
-        // Após o carregamento dos dados, configura o event listener para o input
-        const inputBusca = document.getElementById("pergunta");
-        if (inputBusca) {
-            inputBusca.addEventListener("input", () => {
-                paginaAtual = 1; // Reseta para a primeira página a cada nova busca
-                const resultados = buscarInfracoes(inputBusca.value);
-                mostrarResultados(resultados);
-            });
-            // Adiciona um listener para o evento 'load' (quando a página recarrega)
-            // para garantir que a busca inicial seja feita caso haja algum valor pré-preenchido
-            // ou para mostrar todos os resultados se a caixa estiver vazia no início
-            // if (inputBusca.value.trim() !== '') {
-            //    const resultadosIniciais = buscarInfracoes(inputBusca.value);
-            //    mostrarResultados(resultadosIniciais);
-            // } else {
-            //    // Opcional: mostrar todas as infrações inicialmente se a busca for vazia
-            //    // mostrarResultados(infracoesCarregadas);
-            // }
-        } else {
-            console.error("ERRO: Elemento de input com ID 'pergunta' não encontrado. Verifique seu HTML.");
-        }
-    });
-});
+        btnPagina.textContent = i
