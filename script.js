@@ -11,7 +11,7 @@ function normalizar(texto) {
 }
 
 async function carregarDados() {
-    const resposta = await fetch("infracoes.json");
+    const resposta = await fetch("infracoes.json"); // nome corrigido
     dados = await resposta.json();
 }
 
