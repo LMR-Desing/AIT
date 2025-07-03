@@ -1,0 +1,1034 @@
+[
+  {
+    "CÓDIGO DA INFRAÇÃO": 5002,
+    "DESCRIÇÃO DA INFRAÇÃO": "Multa, por não identificação do condutor infrator, imposta à pessoa jurídica "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5010,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir veículo sem possuir CNH ou Permissão para Dirigir"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5029,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir veículo com CNH ou PPD cassada"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5029,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir veículo com CNH ou PPD com suspensão do direito de dirigir"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5037,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir veículo com CNH de categoria diferente da do veículo e Dirigir veículo com CNH ou PPD com suspensão do direito de dirigir"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5045,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir veículo com validade de CNH/PPD vencida há mais de 30 dias"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5053,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir veículo sem usar lentes corretoras de visão e Dirigir veículo sem usar aparelho auxiliar de audição e Dirigir veículo sem usar aparelho auxiliar de prótese física e Dirigir veículo s/ adaptações impostas na concessão/renovação licença conduzir"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5061,
+    "DESCRIÇÃO DA INFRAÇÃO": "Entregar veículo a pessoa sem CNH ou Permissão para Dirigir"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5070,
+    "DESCRIÇÃO DA INFRAÇÃO": "Entregar veículo a pessoa com CNH ou PPD cassada e Entregar veículo a pessoa com CNH ou PPD com suspensão do direito de dirigir"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5088,
+    "DESCRIÇÃO DA INFRAÇÃO": "Entregar veículo a pessoa com CNH de categoria diferente da do veículo e Entregar veículo a pessoa com PPD de categoria diferente da do veículo"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5096,
+    "DESCRIÇÃO DA INFRAÇÃO": "Entregar veículo a pessoa com CNH/PPD vencida há mais de 30 dias"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5100,
+    "DESCRIÇÃO DA INFRAÇÃO": "Entregar o veículo a pessoa sem usar lentes corretoras de visão e Entregar o veículo a pessoa sem usar aparelho auxiliar de audição e Entregar o veículo a pessoa sem aparelho de prótese física e Entregar veíc pessoa s/ adaptações impostas concessão/renovação licença conduzir"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5118,
+    "DESCRIÇÃO DA INFRAÇÃO": "Permitir posse/condução do veículo a pessoa sem CNH ou PPD"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5126,
+    "DESCRIÇÃO DA INFRAÇÃO": "Permitir posse/condução do veículo a pessoa com CNH ou PPD cassada e Permitir posse/condução veíc pessoa com CNH/PPD c/ suspensão direito de dirigir"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5134,
+    "DESCRIÇÃO DA INFRAÇÃO": "Permitir posse/condução veíc a pessoa com CNH categoria diferente da do veículo e Permitir posse/condução veíc a pessoa com PPD categoria diferente da do veículo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5142,
+    "DESCRIÇÃO DA INFRAÇÃO": "Permitir posse/condução do veíc a pessoa com CNH/PPD vencida há mais de 30 dias "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5150,
+    "DESCRIÇÃO DA INFRAÇÃO": "Permitir posse/condução do veículo a pessoa sem usar lentes corretoras de visão e Permitir posse/condução do veículo a pessoa s/ usar aparelho auxiliar de audição e Permitir posse/condução do veículo a pessoa sem usar aparelho de prótese física e Permitir posse/cond veíc s/ adaptações impostas concessão/renovação licença cond"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5169,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir sob a influência de álcool e Dirigir sob a influência de qquer substância psicoativa que deter. Dependência"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5177,
+    "DESCRIÇÃO DA INFRAÇÃO": "Confiar/entregar veíc pess c/ estado físico/psíquico s/ condições dirigir segur"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5185,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar o condutor de usar o cinto segurança e Deixar o passageiro de usar o cinto segurança"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5193,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transportar criança sem observância das normas de segurança estabelecidas p/ CTB"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5207,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir sem atenção ou sem os cuidados indispensáveis à segurança"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5215,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir ameaçando os pedestres que estejam atravessando a via pública e Dirigir ameaçando os demais veículos "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5223,
+    "DESCRIÇÃO DA INFRAÇÃO": "Usar veículo para arremessar sobre os pedestres água ou detritos e Usar veículo para arremessar sobre os veículos água ou detritos"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5231,
+    "DESCRIÇÃO DA INFRAÇÃO": "Atirar do veículo objetos ou substâncias e Abandonar na via objetos ou substâncias"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5240,
+    "DESCRIÇÃO DA INFRAÇÃO": "Disputar corrida"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5258,
+    "DESCRIÇÃO DA INFRAÇÃO": "Promover na via competição sem permissão e Promover na via eventos organizados sem permissão e Promover na via exibição e demonstração de perícia em manobra de veículo s/perm "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5266,
+    "DESCRIÇÃO DA INFRAÇÃO": "Participar na via como condutor em competição sem permissão e Participar na via como condutor em eventos organizados sem permissão  e Participar como condutor exib/demonst perícia em manobra de veic s/ permissão "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5274,
+    "DESCRIÇÃO DA INFRAÇÃO": "Utiliz veíc demonst/exibir manobra perigosa mediante arrancada brusca e Utiliz veíc dem/exibir manob perig med derrap/frenag c/desliz/arrast pneus"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5282,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar o cond envolvido em acidente, de prestar ou providenciar socorro a vítima "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5290,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar o cond envolvido em acid, de adotar provid p/ evitar perigo p/o trânsito"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5304,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar o cond envolvido em acidente, de preservar local p/ trab policia/pericia "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5312,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar o cond envolvido em acid, de remover o veíc local qdo determ polic/agente "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5320,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar o cond envolvido em acid, de identificar-se policial e prestar inf p/o BO "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5339,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar o cond de prestar socorro vítima acid de trânsito, qdo solicit p/ agente "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5347,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar o condutor envolvido em acidente s/ vítima, de remover o veículo do local"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5355,
+    "DESCRIÇÃO DA INFRAÇÃO": "Fazer ou deixar que se faça reparo em veíc, em rodovia e via de trânsito rápido "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5363,
+    "DESCRIÇÃO DA INFRAÇÃO": "Fazer/deixar que se faça reparo em veíc nas vias (q não rodovia/transito rapido) "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5371,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ter seu veículo imobilizado na via por falta de combustível "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5380,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar nas esquinas e a menos de 5m do alinhamento da via transversal "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5398,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar afastado da guia da calçada (meio-fio) de 50cm a 1m "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5401,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar afastado da guia da calçada (meio-fio) a mais de 1m "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5410,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar em desacordo com as posições estabelecidas no CTB "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5428,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar na pista de rolamento das estradas e Estacionar na pista de rolamento das rodovias e Estacionar na pista de rolamento das vias de trânsito rápido e Estacionar na pista de rolamento das vias dotadas de acostamento "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5436,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar junto/sobre hidr de incêndio, reg de água/tampa de poço visit gal sub "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5444,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar nos acostamentos "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5452,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar no passeio, Estacionar sobre faixa destinada a pedestre, Estacionar sobre ciclovia ou ciclofaixa, Estacionar nas ilhas ou refúgios, Estacionar ao lado ou sobre canteiro central/divisores de pista de rolamento, Estacionar ao lado ou sobre marcas de canalização, Estacionar ao lado ou sobre gramado ou jardim público "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5460,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar em guia de calçada rebaixada destinada à entrada/saída de veículos "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5479,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar impedindo a movimentação de outro veículo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5487,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar ao lado de outro veículo em fila dupla "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5495,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar na área de cruzamento de vias "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5509,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar no ponto de embarque/desembarque de passageiros transporte coletivo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5517,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar nos viadutos, Estacionar nas pontes, Estacionar nos túneis "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5525,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar na contramão de direção "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5533,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar aclive/declive ñ freado e sem calço segurança, PBT superior a 3500kg "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5541,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar em desacordo com a regulamentação especificada pela sinalização, estacionamento rotativo, ponto ou vaga de táxi, vaga de carga/descarga, vaga portador necessid especiais, vaga idoso, vaga de curta duração "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5550,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar em local/horário proibido especificamente pela sinalização "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5568,
+    "DESCRIÇÃO DA INFRAÇÃO": "Estacionar local/horário de estacionamento e parada proibidos pela sinalização "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5576,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar nas esquinas e a menos 5m do bordo do alinhamento da via transversal "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5584,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar afastado da guia da calçada (meio-fio) de 50cm a 1m "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5592,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar afastado da guia da calçada (meio-fio) a mais de 1m "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5606,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar em desacordo com as posições estabelecidas no CTB "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5614,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar na pista de rolamento das estradas, Parar na pista de rolamento das rodovias, Parar na pista de rolamento das vias de trânsito rápido, Parar na pista de rolamento das demais vias dotadas de acostamento"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5622,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar no passeio, Parar sobre faixa destinada a pedestres, Parar nas ilhas ou refúgios, Parar nos canteiros centrais/divisores de pista de rolamento, Parar nas marcas de canalização"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5630,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar na área de cruzamento de vias "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5649,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar nos viadutos, Parar nas pontes, Parar nos túneis"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5657,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar na contramão de direção "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5665,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar em local/horário proibidos especificamente pela sinalização "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5673,
+    "DESCRIÇÃO DA INFRAÇÃO": "Parar sobre faixa de pedestres na mudança de sinal luminoso, e (fisc eletrônica)"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5681,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar na faixa/pista da direita regul circulação exclusiva determ veículo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5690,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar na faixa/pista da esquerda regul circulação exclusiva determ veículo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5703,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de conservar o veículo na faixa a ele destinada pela sinalização de regul "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5711,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de conservar nas faixas da direita o veículo lento e de maior porte "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5720,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar pela contramão de direção em via com duplo sentido de circulação "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5738,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar pela contramão de direção em via c/ sinalização de regul sentido único "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5746,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar em local/horário não permitido pela regul estabelecida p/ autoridade,  rodízio, caminhão"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5762,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar ao lado de outro veículo, interrompendo ou perturbando o trânsito "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5770,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de dar passagem a veíc precedido de batedores devidamente identificados, Deixar de dar passagem a veíc socorro incêndio/salv serv urgência devid identif, Deixar de dar passagem a veíc de polícia em serviço de urgência devid identif, Deixar de dar passagem a veíc de operação e fiscalização de trânsito devid ident, Deixar de dar passagem a ambulância em serviço de urgência devid identificada"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5789,
+    "DESCRIÇÃO DA INFRAÇÃO": "Seguir veículo em serv urgência devid identific p/ alarme sonoro/ilum vermelha "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5797,
+    "DESCRIÇÃO DA INFRAÇÃO": "Forçar passagem entre veícs trans sent opostos na iminência realiz ultrapassagem "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5800,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar guardar dist segurança lat/front entre seu veíc e demais e ao bordo pista "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5819,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com o veículo em calçadas, passeios, Transitar com o veículo em ciclovias, ciclofaixas - Transitar com o veículo em ajardinamentos, gramados, jardins públicos - Transitar com o veículo em canteiros centrais/divisores de pista de rolamento - Transitar com o veículo em ilhas, refúgios - Transitar com o veículo em marcas de canalização - Transitar com o veículo em acostamentos - Transitar com o veículo em passarelas"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5827,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar em marcha ré, salvo na distância necessária a pequenas manobras "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5835,
+    "DESCRIÇÃO DA INFRAÇÃO": "Desobedecer às ordens emanadas da autorid compet de trânsito ou de seus agentes "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5843,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de indicar c/ antec, med gesto de braço/luz indicadora, início da marcha - Deixar de indicar c/ antec, med gesto de braço/luz indicadora, manobra de parar - Deixar de indicar c/ antec, med gesto de braço/luz indicadora, mudança direção - Deixar de indicar c/ antec, med gesto de braço/luz indicadora, mudança de faixa "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5851,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de deslocar c/antecedência veíc p/ faixa mais à esquerda qdo for manobrar - Deixar de deslocar c/antecedência veíc p/ faixa mais à direita qdo for manobrar"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5860,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de dar passagem pela esquerda quando solicitado "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5878,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar pela direita, salvo qdo veíc da frente der sinal p/ entrar esquerda "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5886,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrap pela direita veíc transp colet/escolar parado para emb/desemb passageiros "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5894,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de guardar a distância lateral de 1,50m ao passar/ultrapassar bicicleta "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5908,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar pelo acostamento "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5916,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar em interseções - Ultrapassar em passagem de nível "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5924,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar pela contramão nas curvas sem visibilidade suficiente - Ultrapassar pela contramão nos aclives ou declives, sem visibilidade suficiente"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5932,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar pela contramão nas faixas de pedestre "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5940,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar pela contramão nas pontes - Ultrapassar pela contramão nos viadutos - Ultrapassar pela contramão nos túneis"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5959,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar pela contramão veículo parado em fila junto sinal luminoso - Ultrapassar pela contramão veículo parado em fila junto a cancela/porteira - Ultrapassar pela contramão veículo parado em fila junto a cruzamento - Ultrapassar pela contramão veíc parado em fila junto qq impedimento à circulação "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5967,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar pela contramão linha de divisão de fluxos opostos, contínua amarela "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5975,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de parar no acostamento à direita, p/ cruzar pista ou entrar à esquerda "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5983,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar veículo em movimento que integre cortejo/desfile/formação militar "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 5991,
+    "DESCRIÇÃO DA INFRAÇÃO": "Executar operação de retorno em locais proibidos pela sinalização "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6009,
+    "DESCRIÇÃO DA INFRAÇÃO": "Executar operação de retorno nas curvas - Executar operação de retorno nos aclives ou declives - Executar operação de retorno nas pontes - Executar operação de retorno nos viadutos - Executar operação de retorno nos túneis "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6017,
+    "DESCRIÇÃO DA INFRAÇÃO": "Executar operação de retorno passando por cima de calçada, passeio - Executar operação de retorno passando por cima de ilha, refúgio - Executar operação de retorno passando por cima de ajardinamento - Executar operação de retorno passando por cima de canteiro de divisor de pista - Executar operação de retorno passando por cima de faixa de pedestres - Executar operação de retorno passando por cima de faixa de veíc não motorizados "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6025,
+    "DESCRIÇÃO DA INFRAÇÃO": "Executar retorno nas interseções, entrando na contramão da via transversal "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6033,
+    "DESCRIÇÃO DA INFRAÇÃO": "Executar retorno c/prejuízo da circulação/segurança ainda que em local permitido "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6041,
+    "DESCRIÇÃO DA INFRAÇÃO": "Executar operação de conversão à direita em local proibido pela sinalização - Executar operação de conversão à esquerda em local proibido pela sinalização"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6050,
+    "DESCRIÇÃO DA INFRAÇÃO": "Avançar o sinal vermelho do semáforo - Avançar o sinal de parada obrigatória - Avançar o sinal vermelho do semáforo - fiscalização eletrônica "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6068,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transpor bloqueio viário com ou sem sinalização ou dispositivos auxiliares - Deixar de adentrar às áreas destinadas à pesagem de veículos - Evadir-se para não efetuar o pagamento do pedágio "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6076,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transpor bloqueio viário policial "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6084,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ultrapassar veículos motorizados em fila, parados em razão de sinal luminoso - Ultrapassar veículos motorizados em fila, parados em razão de cancela - Ultrapassar veíc motorizados em fila parados em razão de bloqueio viário parcial - Ultrapassar veículos motorizados em fila, parados em razão de qualquer obstáculo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6092,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de parar o veículo antes de transpor linha férrea "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6106,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de parar sempre que a marcha for interceptada por agrupamento de pessoas "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6114,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de parar sempre que a marcha for interceptada por agrupamento de veículos "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6122,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de dar preferência a pedestre/veic ñ motorizado na faixa a ele destinada "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6130,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de dar preferência a pedestre/veic ñ mot que ñ haja concluído a travessia "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6149,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de dar preferência a pedestre port deficiência fís/criança/idoso/gestante "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6157,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de dar preferência a pedestre/veic ñ mot qdo iniciada travessia s/sinaliz "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6165,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de dar preferência a pedestre/veic não mot atravessando a via transversal "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6173,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de dar preferência em interseção ñ sinaliz, a veíc circulando por rodovia - Deixar de dar preferência em interseção ñ sinaliz, veíc circulando por rotatória - Deixar de dar prefer em interseção não sinalizada, a veículo que vier da direita "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6181,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de dar preferência nas interseções com sinalização de Dê a Preferência "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6190,
+    "DESCRIÇÃO DA INFRAÇÃO": "Entrar/sair área lindeira sem precaução com a segurança de pedestres e veículos "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6203,
+    "DESCRIÇÃO DA INFRAÇÃO": "Entrar/sair de fila de veículos estacionados sem dar pref a pedestres/veículos "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6254,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar em velocidade inferior à metade da máxima da via, salvo faixa direita "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6262,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir a veloc qdo se aproximar de passeata/aglomeração/desfile/etc "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6270,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir a veloc onde o trânsito esteja sendo controlado pelo agente "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6289,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir a velocidade do veículo ao aproximar-se da guia da calçada - Deixar de reduzir a velocidade do veículo ao aproximar-se do acostamento"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6297,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir velocidade do veículo ao aproximar-se interseção ñ sinalizada "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6300,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar reduzir velocidade nas vias rurais cuja faixa domínio não esteja cercada "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6319,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir a velocidade nos trechos em curva de pequeno raio "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6327,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir veloc ao aproximar local sinaliz advert de obras/trabalhadores "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6335,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir a velocidade sob chuva/neblina/cerração/ventos fortes "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6343,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir a velocidade quando houver má visibilidade "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6351,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir veloc qdo pavimento se apresentar escorreg/defeituoso/avariado "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6360,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir a velocidade à aproximação de animais na pista "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6378,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir a velocidade de forma compatível com a segurança, em declive "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6386,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir veloc de forma compatível c/ segurança ao ultrapassar ciclista "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6394,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de reduzir a velocidade nas proximidades de escolas - Deixar de reduzir a velocidade nas proximidades de hospitais - Deixar de reduzir veloc na proxim estação embarque/desembarque passageiros - Deixar de reduzir veloc onde haja intensa movimentação de pedestres "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6408,
+    "DESCRIÇÃO DA INFRAÇÃO": "Portar no veículo placas de identificação em desacordo c/ especif/modelo Contran "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6416,
+    "DESCRIÇÃO DA INFRAÇÃO": "Confec/distribuir/colocar veíc próprio/terceiro placa identif desacordo Contran "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6424,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de manter ligado em emerg sist ilum vermelha intermitente ainda q parado "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6432,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com farol desregulado perturbando visão outro condutor - Transitar com o facho de luz alta perturbando visão outro condutor"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6440,
+    "DESCRIÇÃO DA INFRAÇÃO": "Fazer uso do facho de luz alta dos faróis em vias providas de iluminação pública "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6459,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de sinalizar via p/ tornar visível local qdo tiver remover veíc da pista - Deixar de sinalizar a via p/ tornar visível o local qdo permanecer acostamento"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6467,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de sinalizar a via p/ tornar visível o local qdo a carga for derramada "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6475,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de retirar qualquer objeto utilizado para sinalização temporária da via "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6483,
+    "DESCRIÇÃO DA INFRAÇÃO": "Usar buzina que não a de toque breve como advertência a pedestre ou condutores "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6491,
+    "DESCRIÇÃO DA INFRAÇÃO": "Usar buzina prolongada e sucessivamente a qualquer pretexto "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6505,
+    "DESCRIÇÃO DA INFRAÇÃO": "Usar buzina entre as vinte e duas e as seis horas "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6513,
+    "DESCRIÇÃO DA INFRAÇÃO": "Usar buzina em locais e horários proibidos pela sinalização "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6521,
+    "DESCRIÇÃO DA INFRAÇÃO": "Usar buzina em desacordo c/ os padrões e freqüências estabelecidas pelo Contran "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6530,
+    "DESCRIÇÃO DA INFRAÇÃO": "Usar no veículo equip c/ som em volume/freqüência não autorizados pelo Contran "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6548,
+    "DESCRIÇÃO DA INFRAÇÃO": "Usar no veíc alarme/aparelho produz som perturbe sossego púb desac norma Contran "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6556,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo com o lacre de identificação violado/falsificado - Conduzir o veículo com a inscrição do chassi violada/falsificada - Conduzir o veículo com o selo violado/falsificado - Conduzir o veículo com a placa violada/falsificada - Conduzir o veículo com qualquer outro elem de identificação violado/falsificado "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6564,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo transportando passageiros em compartimento de carga "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6572,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo com dispositivo antirradar "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6580,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo sem qualquer uma das placas de identificação "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6599,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo que não esteja registrado - Conduzir o veículo registrado que não esteja devidamente licenciado"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6602,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo com qualquer uma das placas sem legibilidade e visibilidade "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6610,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo com a cor alterada - Conduzir o veículo com característica alterada "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6629,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir veículo s/ ter sido submetido à inspeção seg veicular, qdo obrigatória "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6637,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo sem equipamento obrigatório - Conduzir o veículo com equipamento obrigatório ineficiente/inoperante"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6645,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo com equip obrigatório em desacordo com o estab pelo Contran "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6653,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo com descarga livre - Conduzir o veículo com silenciador de motor defeituoso/deficiente/inoperante"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6661,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo com equipamento ou acessório proibido "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6670,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo c/ equip do sistema de iluminação e de sinalização alterados "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6688,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir veíc c/ registrador instan inalt de velocidade/tempo viciado/defeituoso "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6696,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir c/ inscr/adesivo/legenda/símbolo afixado pára-brisa e extensão traseira - Conduzir c/ inscr/adesivo/legenda/símbolo pintado pára-brisa e extensão traseira"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6700,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir veíc com vidro total/parcialmente coberto por película, painéis/pintura "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6718,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo com cortinas ou persianas fechadas "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6726,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo em mau estado de conservação, comprometendo a segurança - Conduzir o veículo reprovado na avaliação de inspeção de segurança - Conduzir o veículo reprovado na avaliação de emissão de poluentes e ruído "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6734,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo sem acionar o limpador de pára-brisa sob chuva "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6742,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo sem portar a autorização para condução de escolares "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6750,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veíc de carga c/ falta inscrição da tara e demais previstas no CTB "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6769,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir o veículo com defeito no sistema de iluminação/lâmpada queimada - Conduzir o veículo com defeito no sistema de sinalização/lâmpada queimada "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6777,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com o veículo danificando a via, suas instalações e equipamentos"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6785,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com veículo derramando a carga que esteja transportando - Transitar com veículo lançando a carga que esteja transportando - Transitar com veículo arrastando a carga que esteja transportando "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6793,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com veíc derramando/lançando combustível/lubrif que esteja utilizando "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6807,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar c/veíc derraman/lançando/arrastando objeto possa acarretar risco acid "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6815,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com veículo produzindo fumaça, gases ou partículas em desac c/ Contran "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6823,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar c/ veíc e/ou carga c/ dimensões superiores limite legal s/ autorização - Transitar c/ veíc e/ou carga c/ dimensões superiores est p/sinalização s/autoriz"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6831,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com o veículo com excesso de peso PBT/PBTC - Transitar com o veículo com excesso de peso - Por Eixo - Transitar com o veículo com excesso de peso - PBT/PBTC e Por Eixo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6840,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar em desacordo c/ autorização expedida p/veículo c/ dimensões excedentes - Transitar com autorização vencida, expedida p/ veículo c/ dimensões excedentes"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6858,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com o veículo com lotação excedente "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6866,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar efetuando transporte remunerado de pessoas qdo ñ licenciado p/esse fim - Transitar efetuando transporte remunerado de bens qdo não licenciado p/ esse fim"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6874,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com o veículo desligado em declive - Transitar com o veículo desengrenado em declive"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6882,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com o veículo excedendo a CMT em até 600 kg "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6890,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com o veículo excedendo a CMT entre 601 e 1.000 kg"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6904,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar com o veículo excedendo a CMT acima de 1.000 kg "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6912,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir veículo sem os documentos de porte obrigatório referidos no CTB  "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6920,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de efetuar registro do veículo em 30 dias, qdo for transf a propriedade - Deixar de efetuar reg do veíc em 30 dias, qdo mudar o munic de domicilio/resid - Deixar de efetuar reg de veíc em 30 dias, qdo for alterada qquer caract do veic - Deixar de efetuar registro de veículo em 30 dias, qdo houver mudança de categoria"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6939,
+    "DESCRIÇÃO DA INFRAÇÃO": "Falsificar ou adulterar documento de habilitação - Falsificar ou adulterar documento de identificação do veículo"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6947,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir pessoas nas partes externas do veículo - Conduzir animais nas partes externas do veículo - Conduzir carga nas partes externas do veículo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6955,
+    "DESCRIÇÃO DA INFRAÇÃO": "Rebocar outro veículo com cabo flexível ou corda "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6963,
+    "DESCRIÇÃO DA INFRAÇÃO": "Trans c/veíc desac c/especificação/falta de inscr/simbologia necessária identif "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6971,
+    "DESCRIÇÃO DA INFRAÇÃO": "Recusar-se a entregar CNH/CRV/CRLV/ outros documentos "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6980,
+    "DESCRIÇÃO DA INFRAÇÃO": "Retirar do local veículo legalmente retido para regularização, sem permissão "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 6998,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar responsável de promover baixa registro de veíc irrecuperável/desmontado "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7005,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de atualizar o cadastro de registro do veículo - Deixar de atualizar o cadastro de habilitação do condutor"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7013,
+    "DESCRIÇÃO DA INFRAÇÃO": "Fazer falsa declaração de domicílio para fins de registro/licenciamento - Fazer falsa declaração de domicílio para fins de habilitação"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7021,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar seguradora de comunicar ocorrência perda total veíc e devolver placas/doc "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7030,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir motocicleta, motoneta e ciclomotor sem capacete de segurança - Conduzir motocicleta, motoneta e ciclomotor sem vestuário aprovado pelo Contran"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7048,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir motocicleta, motoneta e ciclomotor transportando passageiro s/ capacete - Conduzir motocicleta/motoneta/ciclomotor transportando pas. fora do assento"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7056,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir motoc/moton/ciclomotor fazendo malabarismo/equilibrando-se em uma roda - Conduzir ciclo fazendo malabarismo ou equilibrando-se em uma roda"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7064,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir motocicleta, motoneta e ciclomotor com os faróis apagados "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7072,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir motocicleta/motoneta/ciclomotor transportando criança menor de 7 anos - Conduzir motoc/moton/ciclom transp criança s/ condição cuidar própria segurança"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7080,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir motocicleta, motoneta e ciclomotor rebocando outro veículo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7099,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir motocicleta/motoneta/ciclomotor sem segurar o guidom com ambas as mãos "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7102,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir motocicleta, motoneta e ciclomotor transportando carga incompatível - Conduzir motoc/moton/ transportando carga em desacordo c/ § 2º do Art 139-A CTB"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7110,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir ciclo transportando passageiro fora da garupa/assento a ele destinado "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7129,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir ciclo via de trâns rápido ou rodovia salvo se houver acostam/fx própria - Conduzir ciclomotor em via de trânsito rápido - Conduzir ciclomotor em rodovia salvo se houver acostamento ou faixa própria"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7137,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir ciclo transportando criança s/ condição de cuidar própria segurança "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7145,
+    "DESCRIÇÃO DA INFRAÇÃO": "Utilizar a via para depósito de mercadorias, materiais ou equipamentos "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7153,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de sinalizar obstáculo à circulação/segurança calçada/pista-s/agravamento - Obstaculizar a via indevidamente-s/agravamento"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7161,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de sinalizar obstáculo circulação/segurança calçada/pista-agravamento 2X - Obstaculizar a via indevidamente-agravamento 2X"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7170,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de sinalizar obstáculo circulação/segurança calçada/pista-agravamento 3X - Obstaculizar a via indevidamente-agravamento 3X"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7188,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de sinalizar obstáculo circulação/segurança calçada/pista-agravamento 4X - Obstaculizar a via indevidamente-agravamento 4X"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7196,
+    "DESCRIÇÃO DA INFRAÇÃO": "Obstaculizar a via indevidamente-agravamento 5X "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7200,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de conduzir pelo bordo pista em fila única veíc tração/propulsão humana - Deixar de conduzir pelo bordo da pista em fila única veículo de tração animal "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7218,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transportar em veíc destinado transp passageiros carga excedente desac art.109 "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7226,
+    "DESCRIÇÃO DA INFRAÇÃO": "Deixar de manter acesas à noite as luzes posição qdo o veículo estiver parado - Deixar de manter acesas à noite as luzes de posição veic fazendo carga/descarg a "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7234,
+    "DESCRIÇÃO DA INFRAÇÃO": "Em movimento, deixar de manter acesa a luz baixa durante à noite "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7242,
+    "DESCRIÇÃO DA INFRAÇÃO": "Em movimento de dia, deixar de manter acesa luz baixa túnel com iluminação pública"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7250,
+    "DESCRIÇÃO DA INFRAÇÃO": "Em mov, deixar de manter acesa luz baixa veíc transp coletivo faixa/pista excl "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7269,
+    "DESCRIÇÃO DA INFRAÇÃO": "Em movimento, deixar de manter acesa luz baixa do ciclomotor "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7277,
+    "DESCRIÇÃO DA INFRAÇÃO": "Em mov deixar de manter acesas luzes de posição sob chuva forte/neblina/cerração "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7285,
+    "DESCRIÇÃO DA INFRAÇÃO": "Em movimento, deixar de manter a placa traseira iluminada à noite "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7293,
+    "DESCRIÇÃO DA INFRAÇÃO": "Utilizar o pisca-alerta, exceto em imobilizações ou situações de emergência "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7307,
+    "DESCRIÇÃO DA INFRAÇÃO": "Utilizar luz alta e baixa intermitente, exceto quando permitido pelo CTB "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7315,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir o veículo com o braço do lado de fora "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7323,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir o veículo transport pessoas à sua esquerda ou entre os braços e pernas - Dirigir o veículo transport animais à sua esquerda ou entre os braços e pernas - Dirigir o veículo transport volume à sua esquerda ou entre os braços e pernas "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7331,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir o veículo com incapacidade física ou mental temporária "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7340,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir o veíc usando calçado que ñ se firme nos pés/comprometa utiliz pedais "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7358,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir o veículo com apenas uma das mãos, exceto quando permitido pelo CTB "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7366,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir o veículo utilizando-se de fones nos ouvidos conec a aparelhagem sonora - Dirigir veículo utilizando-se de telefone celular "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7374,
+    "DESCRIÇÃO DA INFRAÇÃO": "Bloquear a via com veículo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7382,
+    "DESCRIÇÃO DA INFRAÇÃO": "É proib ao pedestre permanecer/andar pista, exceto p/ cruzá-las onde permitido "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7390,
+    "DESCRIÇÃO DA INFRAÇÃO": "É proibido ao pedestre cruzar pista de rolamento de viaduto exc onde permitido - de ponte exceto onde permitido - de túneis exceto onde permitido "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7404,
+    "DESCRIÇÃO DA INFRAÇÃO": "É proib ao pedestre atravessar via área cruzamento exc onde permitido p/ sinaliz "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7412,
+    "DESCRIÇÃO DA INFRAÇÃO": "É proib pedestre utilizar via em agrupam que perturbe trâns/prát esporte/desfile "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7420,
+    "DESCRIÇÃO DA INFRAÇÃO": "É proibido ao pedestre andar fora da faixa própria - andar fora da passarela - andar fora da passagem aérea - andar fora da passagem subterrânea"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7439,
+    "DESCRIÇÃO DA INFRAÇÃO": "É proibido ao pedestre desobedecer a sinalização de trânsito específica "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7447,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir bicicleta em passeios onde não seja permitida a circulação desta - Conduzir bicicleta de forma agressiva "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7455,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar em velocidade superior à máxima permitida em até 20% "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7463,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar em velocidade superior à máxima permitida em mais de 20% até 50% "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7471,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar em velocidade superior à máxima permitida em mais de 50% "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7480,
+    "DESCRIÇÃO DA INFRAÇÃO": "Aprovar proj edificação pólo atrativo trânsito s/ anuência órgão/entid trânsito e Aprovar proj edificação pólo atrativo trâns s/ estacion/indicação vias de acesso "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7498,
+    "DESCRIÇÃO DA INFRAÇÃO": "Ñ sinalizar devida/imed obstáculo à circul/segurança veíc/pedestre pista/calçada "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7501,
+    "DESCRIÇÃO DA INFRAÇÃO": "Utilizar ondulação transversal/sonorizador fora padrão/critério estab p/ Contran "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7510,
+    "DESCRIÇÃO DA INFRAÇÃO": "Iniciar obra perturbe/interrompa circulação/segurança veíc/pedestres s/permissão e Iniciar evento perturbe/interrompa circulaç/segurança veíc/pedestres s/permissão "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7528,
+    "DESCRIÇÃO DA INFRAÇÃO": "Não sinalizar a execução ou manutenção da obra e Não sinalizar a execução ou manutenção do evento "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7536,
+    "DESCRIÇÃO DA INFRAÇÃO": "Não avisar comunidade c/ 48h antec interdição via indicando caminho alternativo "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7544,
+    "DESCRIÇÃO DA INFRAÇÃO": "Falta de escrituração livro registro entrada/saída e de uso placa de experiência - Atraso escrituração livro registro entrada/saída e de uso placa de experiência - Fraude escrituração livro registro entrada/saída e de uso placa de experiência - Recusa da exibição do livro registro entrada/saída e de uso placa de experiência "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7552,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir motoc/moton/ efetuando transp remun mercadoria desac c/ art 139-A CTB - Conduzir motoc/moton/ efet transp remun desac normas ativid profic mototaxistas"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7560,
+    "DESCRIÇÃO DA INFRAÇÃO": "Conduzir veíc de transp passag ou carga em desacordo c/ as cond do art 67-C CTB "
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7579,
+    "DESCRIÇÃO DA INFRAÇÃO": "Cond que se recusar a se submeter a qq dos proc prev no art. 277 do CTB"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7587,
+    "DESCRIÇÃO DA INFRAÇÃO": "Transitar na faixa ou via exclusiva regulam. p/ transp. públ. coletivo passag."
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7595,
+    "DESCRIÇÃO DA INFRAÇÃO": "Dirigir veículo realizando cobrança de tarifa com veículo em movimento"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7609,
+    "DESCRIÇÃO DA INFRAÇÃO": "Organizar as condutas previstas no caput do art. 253-A"
+  },
+  {
+    "CÓDIGO DA INFRAÇÃO": 7617,
+    "DESCRIÇÃO DA INFRAÇÃO": "Usar veículo para, deliberadamente, interromper a circulação na via - restringir a circulação na via - perturbar a circulação na via"
+  }
+]
