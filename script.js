@@ -5,17 +5,19 @@ const resultadosPorPagina = 10;
 let termoBusca = "";
 
 function normalizar(texto) {
-    return texto
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[̀-ͯ]/g, "");
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "") // remove acentos
+        .replace(/[.,;:!?()\[\]{}"'-]/g, "") // remove pontuação
+        .replace(/\s+/g, " ") // remove espaços duplicados
+        .trim();
 }
 
 async function carregarDados() {
-    const resposta = await fetch("infracoes_renainf.json"); // Atualizado aqui
-    infracoes = await resposta.json();
+    const resposta = await fetch("infracoes_renainf.json");
+    infracoes = await resposta.json();
 }
-
 
 function buscarInfracoes(pergunta) {
     termoBusca = normalizar(pergunta);
