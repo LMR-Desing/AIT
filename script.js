@@ -11,7 +11,7 @@ function normalizar(texto) {
 }
 
 async function carregarDados() {
-    const resposta = await fetch("infracoes.json"); // nome corrigido
+    const resposta = await fetch("infracoes 3.json");
     dados = await resposta.json();
 }
 
@@ -21,11 +21,11 @@ function buscarInfracoes(pergunta) {
 
     return dados.filter(item => {
         const campos = [
-            item["CÓDIGO DA INFRAÇÃO"],
-            item["DESCRIÇÃO DA INFRAÇÃO"],
-            item["Amparo Legal (CTB)"],
-            item["Infrator"],
-            item["Gravidade"]
+            item["codigo"],
+            item["descricao"],
+            item["artigo_ctb"],
+            item["infrator"],
+            item["gravidade"]
         ].map(campo => normalizar(String(campo || ""))).join(" ");
         return palavras.every(palavra => campos.includes(palavra));
     });
@@ -58,11 +58,11 @@ function mostrarResultados(resultados) {
         const bloco = document.createElement("div");
         bloco.className = "resultado";
         bloco.innerHTML = `
-            <strong>Código:</strong> ${item["CÓDIGO DA INFRAÇÃO"]}<br>
-            <strong>Descrição:</strong> ${destacarTermo(item["DESCRIÇÃO DA INFRAÇÃO"])}<br>
-            <strong>Amparo Legal (CTB):</strong> ${destacarTermo(item["Amparo Legal (CTB)"] || "")}<br>
-            <strong>Infrator:</strong> ${destacarTermo(item["Infrator"] || "")}<br>
-            <strong>Gravidade:</strong> ${destacarTermo(item["Gravidade"] || "")}
+            <strong>Código:</strong> ${item["codigo"]}<br>
+            <strong>Descrição:</strong> ${destacarTermo(item["descricao"])}<br>
+            <strong>Amparo Legal (CTB):</strong> ${destacarTermo(item["artigo_ctb"] || "")}<br>
+            <strong>Infrator:</strong> ${destacarTermo(item["infrator"] || "")}<br>
+            <strong>Gravidade:</strong> ${destacarTermo(item["gravidade"] || "")}
         `;
         div.appendChild(bloco);
     });
