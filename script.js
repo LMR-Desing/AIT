@@ -1,3 +1,31 @@
+@media (max-width: 600px) {
+    input[type="text"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .resultado {
+        font-size: 14px;
+    }
+}
+
+mark {
+    background-color: yellow;
+    padding: 0 2px;
+}
+
+.paginacao {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.paginacao button {
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
 let dados = [];
 let paginaAtual = 1;
 const resultadosPorPagina = 10;
