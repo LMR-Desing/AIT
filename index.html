@@ -19,11 +19,35 @@
             border-left: 5px solid #007BFF;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        @media (max-width: 600px) {
+            input[type="text"] {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .resultado {
+                font-size: 14px;
+            }
+        }
+        mark {
+            background-color: yellow;
+            padding: 0 2px;
+        }
+        .paginacao {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .paginacao button {
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h1>🔎 Consulta de Infrações de Trânsito</h1>
-    <input type="text" id="pergunta" placeholder="Digite uma descrição ou código de infração...">
+    <input type="text" id="pergunta" placeholder="Digite uma descrição ou código de infração..." aria-label="Campo de busca por infração">
     <div id="respostas"></div>
 
     <script src="script.js"></script>
