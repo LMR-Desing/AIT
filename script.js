@@ -3,22 +3,38 @@ let paginaAtual = 1;
 const resultadosPorPagina = 10;
 let termoBusca = "";
 
+function normalizar(texto) {
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, ""); // remove acentos
+}
+
 async function carregarDados() {
     const resposta = await fetch("infracoes.json");
     dados = await resposta.json();
 }
 
 function buscarInfracoes(pergunta) {
-    termoBusca = pergunta.toLowerCase();
-    return dados.filter(item =>
-        (item["CÓDIGO DA INFRAÇÃO"] && item["CÓDIGO DA INFRAÇÃO"].toString().includes(termoBusca)) ||
-        (item["DESCRIÇÃO DA INFRAÇÃO"] && item["DESCRIÇÃO DA INFRAÇÃO"].toLowerCase().includes(termoBusca))
-    );
+    termoBusca = normalizar(pergunta);
+    const palavras = termoBusca.split(" ");
+
+    return dados.filter(item => {
+        const cod = normalizar(String(item["CÓDIGO DA INFRAÇÃO"] || ""));
+        const desc = normalizar(item["DESCRIÇÃO DA INFRAÇÃO"] || "");
+        const texto = `${cod} ${desc}`;
+        return palavras.every(palavra => texto.includes(palavra));
+    });
 }
 
 function destacarTermo(texto) {
-    const regex = new RegExp(`(${termoBusca})`, "gi");
-    return texto.replace(regex, "<mark>$1</mark>");
+    const palavras = termoBusca.split(" ").filter(p => p.length > 1);
+    let resultado = texto;
+    palavras.forEach(palavra => {
+        const regex = new RegExp(`(${palavra})`, "gi");
+        resultado = resultado.replace(regex, "<mark>$1</mark>");
+    });
+    return resultado;
 }
 
 function mostrarResultados(resultados) {
