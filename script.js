@@ -5,16 +5,17 @@ const resultadosPorPagina = 10;
 let termoBusca = "";
 
 function normalizar(texto) {
-    return texto
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[̀-ͯ]/g, "");
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "");
 }
 
 async function carregarDados() {
-    const resposta = await fetch("infracoes.json");
-    infracoes = await resposta.json();
+    const resposta = await fetch("infracoes_renainf.json"); // Atualizado aqui
+    infracoes = await resposta.json();
 }
+
 
 function buscarInfracoes(pergunta) {
     termoBusca = normalizar(pergunta);
