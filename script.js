@@ -1,4 +1,3 @@
-
 let infracoes = [];
 let paginaAtual = 1;
 const resultadosPorPagina = 10;
@@ -33,7 +32,11 @@ function buscarInfracoes(pergunta) {
             item["gravidade"],
             item["orgao_competente"]
         ].map(campo => normalizar(String(campo || ""))).join(" ");
-        return palavras.every(palavra => texto.includes(palavra));
+
+        // === ALTERAÇÃO CRÍTICA AQUI: Usando 'some' em vez de 'every' ===
+        // Isso faz com que a busca retorne um resultado se QUALQUER palavra
+        // do termo de busca for encontrada no texto normalizado.
+        return palavras.some(palavra => texto.includes(palavra));
     });
 }
 
@@ -41,11 +44,13 @@ function destacarTermo(texto) {
     const palavras = termoBusca.split(" ").filter(p => p.length > 1);
     let resultado = texto;
     palavras.forEach(palavra => {
-        const regex = new RegExp("(" + palavra + ")", "gi");
-        resultado = resultado.replace(regex, "<mark>$1</mark>");
+        // A regex precisa ser criada com 'new RegExp' para usar a variável 'palavra'
+        const regex = new RegExp(palavra, "gi"); // 'gi' para busca global e case-insensitive
+        resultado = resultado.replace(regex, "<mark>$&</mark>"); // '$&' para inserir o termo encontrado
     });
     return resultado;
 }
+
 
 function mostrarResultados(resultados) {
     const div = document.getElementById("respostas");
@@ -82,6 +87,12 @@ function mostrarPaginacao(totalResultados) {
     const div = document.getElementById("respostas");
     const totalPaginas = Math.ceil(totalResultados / resultadosPorPagina);
 
+    // Remove qualquer paginação existente antes de adicionar a nova
+    const navExistente = div.querySelector(".paginacao");
+    if (navExistente) {
+        navExistente.remove();
+    }
+
     if (totalPaginas <= 1) return;
 
     const nav = document.createElement("div");
@@ -92,31 +103,10 @@ function mostrarPaginacao(totalResultados) {
         btnAnterior.textContent = "⬅ Anterior";
         btnAnterior.onclick = () => {
             paginaAtual--;
-            mostrarResultados(buscarInfracoes(termoBusca));
+            mostrarResultados(buscarInfracoes(document.getElementById("pergunta").value)); // Passa o valor atual do input
         };
         nav.appendChild(btnAnterior);
     }
 
-    if (paginaAtual < totalPaginas) {
-        const btnProximo = document.createElement("button");
-        btnProximo.textContent = "Próximo ➡";
-        btnProximo.onclick = () => {
-            paginaAtual++;
-            mostrarResultados(buscarInfracoes(termoBusca));
-        };
-        nav.appendChild(btnProximo);
-    }
-
-    div.appendChild(nav);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    carregarDados();
-
-    const input = document.getElementById("pergunta");
-    input.addEventListener("input", () => {
-        paginaAtual = 1;
-        const resultados = buscarInfracoes(input.value);
-        mostrarResultados(resultados);
-    });
-});
+    // Adiciona os números das páginas para uma navegação mais clara
+    for (let i
