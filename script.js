@@ -1,17 +1,24 @@
-
 let dados = [];
+let paginaAtual = 1;
+const resultadosPorPagina = 10;
+let termoBusca = "";
 
 async function carregarDados() {
-    const resposta = await fetch("infracoes.json");
+    const resposta = await fetch("infracoes 1.json");
     dados = await resposta.json();
 }
 
 function buscarInfracoes(pergunta) {
-    const termo = pergunta.toLowerCase();
+    termoBusca = pergunta.toLowerCase();
     return dados.filter(item =>
-        (item["CÓDIGO"] && item["CÓDIGO"].toString().includes(termo)) ||
-        (item["DESCRIÇÃO"] && item["DESCRIÇÃO"].toLowerCase().includes(termo))
+        (item["CÓDIGO DA INFRAÇÃO"] && item["CÓDIGO DA INFRAÇÃO"].toString().includes(termoBusca)) ||
+        (item["DESCRIÇÃO DA INFRAÇÃO"] && item["DESCRIÇÃO DA INFRAÇÃO"].toLowerCase().includes(termoBusca))
     );
+}
+
+function destacarTermo(texto) {
+    const regex = new RegExp(`(${termoBusca})`, "gi");
+    return texto.replace(regex, "<mark>$1</mark>");
 }
 
 function mostrarResultados(resultados) {
@@ -23,12 +30,53 @@ function mostrarResultados(resultados) {
         return;
     }
 
-    resultados.forEach(item => {
+    const inicio = (paginaAtual - 1) * resultadosPorPagina;
+    const fim = inicio + resultadosPorPagina;
+    const pagina = resultados.slice(inicio, fim);
+
+    pagina.forEach(item => {
         const bloco = document.createElement("div");
         bloco.className = "resultado";
-        bloco.innerHTML = `<strong>Código:</strong> ${item["CÓDIGO"]}<br><strong>Descrição:</strong> ${item["DESCRIÇÃO"]}`;
+        bloco.innerHTML = `
+            <strong>Código:</strong> ${item["CÓDIGO DA INFRAÇÃO"]}<br>
+            <strong>Descrição:</strong> ${destacarTermo(item["DESCRIÇÃO DA INFRAÇÃO"])}
+        `;
         div.appendChild(bloco);
     });
+
+    mostrarPaginacao(resultados.length);
+}
+
+function mostrarPaginacao(totalResultados) {
+    const div = document.getElementById("respostas");
+    const totalPaginas = Math.ceil(totalResultados / resultadosPorPagina);
+
+    if (totalPaginas <= 1) return;
+
+    const nav = document.createElement("div");
+    nav.className = "paginacao";
+
+    if (paginaAtual > 1) {
+        const btnAnterior = document.createElement("button");
+        btnAnterior.textContent = "⬅ Anterior";
+        btnAnterior.onclick = () => {
+            paginaAtual--;
+            mostrarResultados(buscarInfracoes(termoBusca));
+        };
+        nav.appendChild(btnAnterior);
+    }
+
+    if (paginaAtual < totalPaginas) {
+        const btnProximo = document.createElement("button");
+        btnProximo.textContent = "Próximo ➡";
+        btnProximo.onclick = () => {
+            paginaAtual++;
+            mostrarResultados(buscarInfracoes(termoBusca));
+        };
+        nav.appendChild(btnProximo);
+    }
+
+    div.appendChild(nav);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -36,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const input = document.getElementById("pergunta");
     input.addEventListener("input", () => {
+        paginaAtual = 1;
         const resultados = buscarInfracoes(input.value);
         mostrarResultados(resultados);
     });
