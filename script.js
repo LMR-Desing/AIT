@@ -201,4 +201,63 @@ function mostrarPaginacao(totalResultados) {
 
     for (let i = 1; i <= totalPaginas; i++) {
         const btnPagina = document.createElement("button");
-        btnPagina.textContent = i
+        btnPagina.textContent = i;
+        btnPagina.className = paginaAtual === i ? "active" : "";
+        btnPagina.onclick = () => {
+            paginaAtual = i;
+            if (inputPesquisa) {
+                mostrarResultados(buscarInfracoes(inputPesquisa.value));
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        navPaginacao.appendChild(btnPagina);
+    }
+
+    if (paginaAtual < totalPaginas) {
+        const btnProximo = document.createElement("button");
+        btnProximo.textContent = "Próximo ➡";
+        btnProximo.onclick = () => {
+            paginaAtual++;
+            if (inputPesquisa) {
+                mostrarResultados(buscarInfracoes(inputPesquisa.value));
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        navPaginacao.appendChild(btnProximo);
+    }
+
+    divRespostas.appendChild(navPaginacao);
+}
+
+// --- Inicialização da Aplicação ---
+document.addEventListener("DOMContentLoaded", () => {
+    // Exibe a mensagem inicial de carregamento
+    const divRespostas = document.getElementById("respostas");
+    if (divRespostas) {
+        divRespostas.innerHTML = '<p class="mensagem-inicial">Carregando dados das infrações... Aguarde.</p>';
+    }
+
+    carregarDadosInfracoes().then(() => {
+        const inputBusca = document.getElementById("pergunta");
+        if (inputBusca) {
+            inputBusca.addEventListener("input", () => {
+                paginaAtual = 1;
+                const resultados = buscarInfracoes(inputBusca.value);
+                mostrarResultados(resultados);
+            });
+            // Após carregar os dados e configurar o listener, limpa a mensagem inicial
+            // Se o input já tiver um valor (ex: recarregou a página com texto), já faz a busca
+            if (inputBusca.value.trim() !== '') {
+                const resultadosIniciais = buscarInfracoes(inputBusca.value);
+                mostrarResultados(resultadosIniciais);
+            } else {
+                // Caso contrário, mostra uma mensagem para o usuário começar a digitar
+                if (divRespostas) {
+                    divRespostas.innerHTML = '<p class="mensagem-inicial">Digite no campo acima para pesquisar infrações.</p>';
+                }
+            }
+        } else {
+            console.error("ERRO: Elemento de input com ID 'pergunta' não encontrado. Verifique seu HTML.");
+        }
+    });
+});
