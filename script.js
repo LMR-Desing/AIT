@@ -1,35 +1,119 @@
+
 let infracoes = [];
+let paginaAtual = 1;
+const resultadosPorPagina = 10;
+let termoBusca = "";
 
-fetch('infracoes_renainf.json')
-    .then(response => response.json())
-    .then(data => {
-        infracoes = data;
-    });
+function normalizar(texto) {
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "");
+}
 
-document.getElementById('pergunta').addEventListener('input', function () {
-    const termo = this.value.toLowerCase().trim();
-    const palavras = termo.split(/\s+/);
+async function carregarDados() {
+    const resposta = await fetch("infracoes.json");
+    infracoes = await resposta.json();
+}
 
-    const resultados = infracoes.filter(infracao => {
-        const texto = Object.values(infracao).join(' ').toLowerCase();
+function buscarInfracoes(pergunta) {
+    termoBusca = normalizar(pergunta);
+    const palavras = termoBusca.split(" ");
+
+    return infracoes.filter(item => {
+        const texto = [
+            item["codigo"],
+            item["desdobramento"],
+            item["descricao"],
+            item["artigo_ctb"],
+            item["infrator"],
+            item["gravidade"],
+            item["orgao_competente"]
+        ].map(campo => normalizar(String(campo || ""))).join(" ");
         return palavras.every(palavra => texto.includes(palavra));
     });
+}
 
-    const container = document.getElementById('respostas');
-    container.innerHTML = '';
+function destacarTermo(texto) {
+    const palavras = termoBusca.split(" ").filter(p => p.length > 1);
+    let resultado = texto;
+    palavras.forEach(palavra => {
+        const regex = new RegExp("(" + palavra + ")", "gi");
+        resultado = resultado.replace(regex, "<mark>$1</mark>");
+    });
+    return resultado;
+}
 
-    resultados.forEach(infracao => {
-        const div = document.createElement('div');
-        div.className = 'resultado';
-        div.innerHTML = `
-            <strong>Código:</strong> ${infracao.codigo}<br>
-            <strong>Desdobramento:</strong> ${infracao.desdobramento}<br>
-            <strong>Descrição:</strong> ${infracao.descricao}<br>
-            <strong>Artigo CTB:</strong> ${infracao.artigo_ctb}<br>
-            <strong>Infrator:</strong> ${infracao.infrator}<br>
-            <strong>Gravidade:</strong> ${infracao.gravidade}<br>
-            <strong>Órgão Competente:</strong> ${infracao.orgao_competente}
+function mostrarResultados(resultados) {
+    const div = document.getElementById("respostas");
+    div.innerHTML = "";
+
+    if (resultados.length === 0) {
+        div.innerHTML = "<p>Nenhuma infração encontrada.</p>";
+        return;
+    }
+
+    const inicio = (paginaAtual - 1) * resultadosPorPagina;
+    const fim = inicio + resultadosPorPagina;
+    const pagina = resultados.slice(inicio, fim);
+
+    pagina.forEach(item => {
+        const bloco = document.createElement("div");
+        bloco.className = "resultado";
+        bloco.innerHTML = `
+            <strong>Código:</strong> ${item["codigo"]}<br>
+            <strong>Desdobramento:</strong> ${item["desdobramento"]}<br>
+            <strong>Descrição:</strong> ${destacarTermo(item["descricao"])}<br>
+            <strong>Artigo CTB:</strong> ${destacarTermo(item["artigo_ctb"] || "")}<br>
+            <strong>Infrator:</strong> ${destacarTermo(item["infrator"] || "")}<br>
+            <strong>Gravidade:</strong> ${destacarTermo(item["gravidade"] || "")}<br>
+            <strong>Órgão Competente:</strong> ${destacarTermo(item["orgao_competente"] || "")}
         `;
-        container.appendChild(div);
+        div.appendChild(bloco);
+    });
+
+    mostrarPaginacao(resultados.length);
+}
+
+function mostrarPaginacao(totalResultados) {
+    const div = document.getElementById("respostas");
+    const totalPaginas = Math.ceil(totalResultados / resultadosPorPagina);
+
+    if (totalPaginas <= 1) return;
+
+    const nav = document.createElement("div");
+    nav.className = "paginacao";
+
+    if (paginaAtual > 1) {
+        const btnAnterior = document.createElement("button");
+        btnAnterior.textContent = "⬅ Anterior";
+        btnAnterior.onclick = () => {
+            paginaAtual--;
+            mostrarResultados(buscarInfracoes(termoBusca));
+        };
+        nav.appendChild(btnAnterior);
+    }
+
+    if (paginaAtual < totalPaginas) {
+        const btnProximo = document.createElement("button");
+        btnProximo.textContent = "Próximo ➡";
+        btnProximo.onclick = () => {
+            paginaAtual++;
+            mostrarResultados(buscarInfracoes(termoBusca));
+        };
+        nav.appendChild(btnProximo);
+    }
+
+    div.appendChild(nav);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    carregarDados();
+
+    const input = document.getElementById("pergunta");
+    input.addEventListener("input", () => {
+        paginaAtual = 1;
+        const resultados = buscarInfracoes(input.value);
+        mostrarResultados(resultados);
     });
 });
