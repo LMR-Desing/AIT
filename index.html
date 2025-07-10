@@ -44,7 +44,7 @@
             color: #0056b3;
             font-size: 1.1em;
         }
-        #pergunta {
+        #pergunta, #busca-orgaos {
             width: 100%;
             padding: 12px 15px;
             border: 1px solid #ccc;
@@ -52,7 +52,7 @@
             font-size: 1em;
             box-sizing: border-box;
         }
-        #pergunta:focus {
+        #pergunta:focus, #busca-orgaos:focus {
             border-color: #007bff;
             outline: none;
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
@@ -117,7 +117,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 40px;
+            margin-top: 20px;
         }
         table th, table td {
             border: 1px solid #ccc;
@@ -155,6 +155,10 @@
         </div>
 
         <h2>Órgãos Autuadores (Anexo V)</h2>
+        <div class="search-container">
+            <label for="busca-orgaos">Filtrar por nome ou código:</label>
+            <input type="text" id="busca-orgaos" placeholder="Digite parte do nome ou código do órgão...">
+        </div>
         <table>
             <thead>
                 <tr>
