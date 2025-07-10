@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Infrações de Trânsito</title>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,6 +14,7 @@
             color: #333;
             line-height: 1.6;
         }
+
         header {
             background-color: #0056b3;
             color: white;
@@ -21,10 +23,12 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
+
         h1 {
             margin-top: 0;
             color: white;
         }
+
         main {
             max-width: 900px;
             margin: 0 auto;
@@ -33,18 +37,21 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .search-container {
             margin-bottom: 25px;
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
+
         .search-container label {
             font-weight: bold;
             color: #0056b3;
             font-size: 1.1em;
         }
-        #pergunta, #busca-orgaos {
+
+        #pergunta {
             width: 100%;
             padding: 12px 15px;
             border: 1px solid #ccc;
@@ -52,15 +59,18 @@
             font-size: 1em;
             box-sizing: border-box;
         }
-        #pergunta:focus, #busca-orgaos:focus {
+
+        #pergunta:focus {
             border-color: #007bff;
             outline: none;
             box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
         }
+
         #respostas {
             border-top: 1px solid #eee;
             padding-top: 20px;
         }
+
         .mensagem-inicial, #respostas p {
             text-align: center;
             color: #555;
@@ -69,6 +79,7 @@
             background-color: #e9ecef;
             border-radius: 5px;
         }
+
         .resultado-infracao {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
@@ -77,14 +88,17 @@
             margin-bottom: 15px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
+
         .resultado-infracao strong {
             color: #0056b3;
         }
+
         mark {
             background-color: #ffc107;
             padding: 2px 4px;
             border-radius: 3px;
         }
+
         .paginacao {
             display: flex;
             justify-content: center;
@@ -92,6 +106,7 @@
             gap: 10px;
             flex-wrap: wrap;
         }
+
         .paginacao button {
             background-color: #007bff;
             color: white;
@@ -103,31 +118,21 @@
             transition: background-color 0.3s ease;
             min-width: 80px;
         }
+
         .paginacao button:hover {
             background-color: #0056b3;
         }
+
         .paginacao button.active {
             background-color: #28a745;
             font-weight: bold;
             cursor: default;
         }
+
         .paginacao button.active:hover {
             background-color: #218838;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table th, table td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-        table th {
-            background-color: #f1f1f1;
-            color: #0056b3;
-        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -137,7 +142,7 @@
             border-top: 1px solid #eee;
         }
     </style>
-</head>
+    </head>
 <body>
     <header>
         <h1>Detran-SP - Consulta de Infrações RENAINF</h1>
@@ -153,27 +158,261 @@
         <div id="respostas">
             <p class="mensagem-inicial">Carregando dados das infrações... Aguarde.</p>
         </div>
-
-        <h2>Órgãos Autuadores (Anexo V)</h2>
-        <div class="search-container">
-            <label for="busca-orgaos">Filtrar por nome ou código:</label>
-            <input type="text" id="busca-orgaos" placeholder="Digite parte do nome ou código do órgão...">
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Órgão</th>
-                </tr>
-            </thead>
-            <tbody id="tabelaOrgaos"></tbody>
-        </table>
     </main>
 
     <footer>
         <p>&copy; 2025</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script>
+        // Variáveis globais para o estado da aplicação
+        let infracoesCarregadas = [];
+        let paginaAtual = 1;
+        const resultadosPorPagina = 10;
+        let termoBuscaAtual = "";
+
+        // --- Função para Normalizar Texto ---
+        function normalizarTexto(texto) {
+            if (typeof texto !== 'string') {
+                texto = String(texto || "");
+            }
+            return texto
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/[.,;:!?()\[\]{}"'-]/g, "")
+                .replace(/\s+/g, " ")
+                .trim();
+        }
+
+        // --- Função para Carregar Dados do JSON ---
+        async function carregarDadosInfracoes() {
+            console.log("Iniciando carregamento do arquivo infracoes_renainf.json...");
+            try {
+                const resposta = await fetch("infracoes_renainf.json");
+                
+                if (!resposta.ok) {
+                    throw new Error(`Erro HTTP: ${resposta.status} - ${resposta.statusText}. Verifique o caminho do arquivo.`);
+                }
+
+                const dados = await resposta.json();
+                
+                if (!Array.isArray(dados)) {
+                    console.warn("O arquivo JSON carregado não é um array. Isso pode causar problemas. Conteúdo:", dados);
+                    infracoesCarregadas = [];
+                } else {
+                    infracoesCarregadas = dados;
+                }
+
+                console.log(`Carregamento concluído. Total de infrações encontradas no JSON: ${infracoesCarregadas.length}`);
+                if (infracoesCarregadas.length > 0) {
+                    console.log("Primeira infração carregada (para verificação):", infracoesCarregadas[0]);
+                } else {
+                    console.warn("O arquivo infracoes_renainf.json foi carregado, mas está vazio ou não contém infrações.");
+                }
+
+            } catch (error) {
+                console.error("ERRO CRÍTICO: Falha ao carregar ou parsear infracoes_renainf.json:", error);
+                const divRespostas = document.getElementById("respostas");
+                if (divRespostas) {
+                    divRespostas.innerHTML = `<p style="color: red;">Não foi possível carregar os dados das infrações. Por favor, verifique o arquivo 'infracoes_renainf.json' e a conexão.</p><p style="color: red;">Detalhes: ${error.message}</p>`;
+                }
+            }
+        }
+
+        // --- Função Principal de Busca ---
+        function buscarInfracoes(termoPesquisa) {
+            termoBuscaAtual = normalizarTexto(termoPesquisa);
+            const palavrasBusca = termoBuscaAtual.split(" ").filter(p => p.length > 0);
+
+            console.log(`Buscando por: "${termoPesquisa}" (Normalizado: "${termoBuscaAtual}")`);
+            console.log("Palavras-chave para busca:", palavrasBusca);
+
+            if (palavrasBusca.length === 0) {
+                console.log("Termo de busca vazio. Nenhum resultado será exibido.");
+                return [];
+            }
+
+            const resultadosFiltrados = infracoesCarregadas.filter(item => {
+                const textoCompletoDoItem = [
+                    item["codigo"],
+                    item["desdobramento"],
+                    item["descricao"],
+                    item["artigo_ctb"],
+                    item["infrator"],
+                    item["gravidade"],
+                    item["orgao_competente"]
+                ].map(campo => normalizarTexto(campo)).join(" ");
+
+                const encontrado = palavrasBusca.some(palavra => textoCompletoDoItem.includes(palavra));
+                return encontrado;
+            });
+
+            console.log(`Busca concluída. ${resultadosFiltrados.length} resultados encontrados.`);
+            return resultadosFiltrados;
+        }
+
+        // --- Função para Destacar Termos nos Resultados ---
+        function destacarTermo(textoOriginal) {
+            const palavrasParaDestacar = termoBuscaAtual.split(" ").filter(p => p.length > 0);
+            let textoProcessado = textoOriginal;
+
+            if (!textoProcessado) {
+                return "N/A";
+            }
+
+            const termosRegex = palavrasParaDestacar
+                .map(palavra => palavra.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+                .join("|");
+
+            if (termoBuscaAtual.length === 0 || termosRegex.length === 0) {
+                return textoOriginal;
+            }
+
+            try {
+                const regexCompleta = new RegExp(`(${termosRegex})`, "gi");
+                textoProcessado = textoProcessado.replace(regexCompleta, (match) => `<mark>${match}</mark>`);
+            } catch (e) {
+                console.error(`Erro ao criar ou usar RegExp para destacar termos: "${termoBuscaAtual}"`, e);
+                return textoOriginal;
+            }
+
+            return textoProcessado;
+        }
+
+        // --- Função para Mostrar os Resultados na Interface ---
+        function mostrarResultados(resultadosParaExibir) {
+            const divRespostas = document.getElementById("respostas");
+            if (!divRespostas) {
+                console.error("Erro: Elemento '#respostas' não encontrado no DOM. Certifique-se de que ele existe no seu HTML.");
+                return;
+            }
+
+            divRespostas.innerHTML = "";
+
+            if (resultadosParaExibir.length === 0) {
+                divRespostas.innerHTML = `<p class="mensagem-inicial">Nenhuma infração encontrada para a sua pesquisa "${termoBuscaAtual}".</p>`;
+                return;
+            }
+
+            const inicio = (paginaAtual - 1) * resultadosPorPagina;
+            const fim = inicio + resultadosPorPagina;
+            const resultadosNaPagina = resultadosParaExibir.slice(inicio, fim);
+
+            resultadosNaPagina.forEach(item => {
+                const bloco = document.createElement("div");
+                bloco.className = "resultado-infracao";
+                bloco.innerHTML = `
+                    <strong>Código:</strong> ${item["codigo"] || "N/A"}<br>
+                    <strong>Desdobramento:</strong> ${item["desdobramento"] ? destacarTermo(item["desdobramento"]) : "N/A"}<br>
+                    <strong>Descrição:</strong> ${item["descricao"] ? destacarTermo(item["descricao"]) : "N/A"}<br>
+                    <strong>Artigo CTB:</strong> ${item["artigo_ctb"] ? destacarTermo(item["artigo_ctb"]) : "N/A"}<br>
+                    <strong>Infrator:</strong> ${item["infrator"] ? destacarTermo(item["infrator"]) : "N/A"}<br>
+                    <strong>Gravidade:</strong> ${item["gravidade"] ? destacarTermo(item["gravidade"]) : "N/A"}<br>
+                    <strong>Órgão Competente:</strong> ${item["orgao_competente"] ? destacarTermo(item["orgao_competente"]) : "N/A"}
+                `;
+                divRespostas.appendChild(bloco);
+            });
+
+            mostrarPaginacao(resultadosParaExibir.length);
+        }
+
+        // --- Função para Gerenciar a Paginação ---
+        function mostrarPaginacao(totalResultados) {
+            const divRespostas = document.getElementById("respostas");
+            if (!divRespostas) return;
+
+            const totalPaginas = Math.ceil(totalResultados / resultadosPorPagina);
+
+            const navExistente = divRespostas.querySelector(".paginacao");
+            if (navExistente) {
+                navExistente.remove();
+            }
+
+            if (totalPaginas <= 1 && totalResultados > 0) {
+                return;
+            }
+            if (totalResultados === 0) {
+                return;
+            }
+
+            const navPaginacao = document.createElement("div");
+            navPaginacao.className = "paginacao";
+
+            const inputPesquisa = document.getElementById("pergunta");
+
+            if (paginaAtual > 1) {
+                const btnAnterior = document.createElement("button");
+                btnAnterior.textContent = "⬅ Anterior";
+                btnAnterior.onclick = () => {
+                    paginaAtual--;
+                    if (inputPesquisa) {
+                        mostrarResultados(buscarInfracoes(inputPesquisa.value));
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+                navPaginacao.appendChild(btnAnterior);
+            }
+
+            for (let i = 1; i <= totalPaginas; i++) {
+                const btnPagina = document.createElement("button");
+                btnPagina.textContent = i;
+                btnPagina.className = paginaAtual === i ? "active" : "";
+                btnPagina.onclick = () => {
+                    paginaAtual = i;
+                    if (inputPesquisa) {
+                        mostrarResultados(buscarInfracoes(inputPesquisa.value));
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+                navPaginacao.appendChild(btnPagina);
+            }
+
+            if (paginaAtual < totalPaginas) {
+                const btnProximo = document.createElement("button");
+                btnProximo.textContent = "Próximo ➡";
+                btnProximo.onclick = () => {
+                    paginaAtual++;
+                    if (inputPesquisa) {
+                        mostrarResultados(buscarInfracoes(inputPesquisa.value));
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+                navPaginacao.appendChild(btnProximo);
+            }
+
+            divRespostas.appendChild(navPaginacao);
+        }
+
+        // --- Inicialização da Aplicação ---
+        document.addEventListener("DOMContentLoaded", () => {
+            const divRespostas = document.getElementById("respostas");
+            if (divRespostas) {
+                divRespostas.innerHTML = '<p class="mensagem-inicial">Carregando dados das infrações... Aguarde.</p>';
+            }
+
+            carregarDadosInfracoes().then(() => {
+                const inputBusca = document.getElementById("pergunta");
+                if (inputBusca) {
+                    inputBusca.addEventListener("input", () => {
+                        paginaAtual = 1;
+                        const resultados = buscarInfracoes(inputBusca.value);
+                        mostrarResultados(resultados);
+                    });
+                    
+                    if (inputBusca.value.trim() !== '') {
+                        const resultadosIniciais = buscarInfracoes(inputBusca.value);
+                        mostrarResultados(resultadosIniciais);
+                    } else {
+                        if (divRespostas) {
+                            divRespostas.innerHTML = '<p class="mensagem-inicial">Digite no campo acima para pesquisar infrações.</p>';
+                        }
+                    }
+                } else {
+                    console.error("ERRO: Elemento de input com ID 'pergunta' não encontrado. Verifique seu HTML.");
+                }
+            });
+        });
+    </script>
+    </body>
 </html>
